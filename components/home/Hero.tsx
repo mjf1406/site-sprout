@@ -12,7 +12,7 @@ export default function Hero() {
 
     return (
         <div className="flex flex-col gap-5 justify-start mt-24 items-center min-h-screen max-w-lg">
-            <div className="relative">
+            <div className="relative -z-10">
                 <Image
                     src="/sprouty-student.png" // Path relative to the public folder
                     alt="Sprouty Student Mascot"
@@ -21,7 +21,7 @@ export default function Hero() {
                     className="rounded-lg" // Optional: Add styling classes
                 />
                 {/* Speech Bubble */}
-                <div className="absolute -top-20 border-black dark:border-white border -right-32 bg-secondary p-4 rounded-lg shadow-lg max-w-[200px] flex flex-col items-center">
+                <div className="absolute -top-20 border-black dark:border-white border -right-12 bg-secondary p-4 rounded-lg shadow-lg max-w-[200px] flex flex-col items-center">
                     <p className="text-lg text-center">
                         Hi! I&apos;m Sprouty! Let&apos;s learn about the web
                         together!
@@ -34,7 +34,7 @@ export default function Hero() {
                         fill="hsl(var(--secondary))"
                         stroke={isDark ? "#fff" : "#000"}
                     >
-                        <path d="M0 -12 L10 15 L20 -12 Z" />
+                        <path d="M0 -8 L20 15 L17 -12 Z" />
                     </svg>
                 </div>
             </div>
@@ -72,7 +72,7 @@ export default function Hero() {
                 Learn websites the fun way!
             </h1>
             {/* Simple Explanation */}
-            <p>
+            <p className="text-lg md:text-base">
                 Ever wonder what a Navbar, Hamburger Menu, or Pop-Up is? Sprouty
                 up there will teach you all about the parts of websites with fun
                 lessons and activities. Let&apos;s go!

@@ -68,7 +68,7 @@ html {
 }
 
 .link {
-    @apply hover:underline;
+    @apply underline;
 }
 
 .text-2xs {

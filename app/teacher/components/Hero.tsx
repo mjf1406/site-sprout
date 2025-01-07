@@ -10,7 +10,7 @@ export default function Hero() {
     const isDark = theme === "dark";
     return (
         <div className="flex flex-col gap-5 justify-start mt-24 items-center min-h-screen max-w-lg">
-            <div className="relative">
+            <div className="relative -z-10">
                 <Image
                     src="/sprouty-teacher.png" // Path relative to the public folder
                     alt="Sprouty Teacher Mascot"
@@ -67,13 +67,16 @@ export default function Hero() {
                 </div> */}
             {/* Super Clear Heading */}
             <h1 className="text-4xl font-bold">
-                Help your students learn the parts of websites!
+                Help your students learn about the user interface elements of
+                web pages.
             </h1>
             {/* Extra Context */}
-            <p>
-                Help your students explore the hidden world of websites by
-                learning about different elements on the web! Perfect for young
-                learners curious about how the internet works.
+            <p className="text-lg md:text-base">
+                Help your students explore the building blocks of websites by
+                learning about key components like headers, navigation menus,
+                buttons, images, links, and footers. This foundational knowledge
+                will help students better understand and navigate the web with
+                confidence.
             </p>
             {/* Clear Doubts */}
             {/* <div>

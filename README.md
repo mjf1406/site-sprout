@@ -8,6 +8,8 @@ Where kids come to learn the names of different items on the web!
 
 ### p1
 
+-   UX: Implement internationalization with [next-international](https://next-international.vercel.app/docs)
+
 ### p0
 
 ## Change Log
@@ -19,6 +21,8 @@ DB = database
 
 2025/01/07
 
+-   UX: added a site mascot
+-   UX: added student and teacher landing pages
 -   UI: added header
 -   UI: added nav elements
 -   UI: added theme toggle

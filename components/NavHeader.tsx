@@ -1,8 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X } from "lucide-react"; // Import Menu and X icons
 import { LucideIcon } from "lucide-react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ThemeToggle } from "./ui/theme-toggle";
 
 export type NavItem = {
     name: string;
@@ -22,38 +27,101 @@ const navItems: NavItem[] = [
         href: "/teacher",
         img: "/sprouty-teacher.png",
     },
+    // Add more nav items as needed
 ];
 
 export default function NavHeader() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen((prev) => !prev);
+    };
+
     return (
-        <nav className="flex gap-4">
-            {navItems.map((item) => (
-                <Link
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center gap-2 text-sm hover:bg-primary rounded-lg px-2"
-                >
-                    {item.icon ? (
-                        typeof item.icon === "function" ? (
-                            <item.icon size={20} />
-                        ) : (
-                            <FontAwesomeIcon
-                                icon={item.icon}
-                                size="lg"
+        <nav className="flex items-center justify-between">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-1">
+                {navItems.map((item) => (
+                    <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-center gap-1 hover:bg-primary px-3 rounded-lg py-2"
+                    >
+                        {item.icon ? (
+                            typeof item.icon === "function" ? (
+                                <item.icon size={20} />
+                            ) : (
+                                <FontAwesomeIcon
+                                    icon={item.icon}
+                                    size="lg"
+                                />
+                            )
+                        ) : item.img ? (
+                            <Image
+                                src={item.img}
+                                alt={`${item.name} Mascot`}
+                                width={24}
+                                height={24}
                             />
-                        )
-                    ) : item.img ? (
-                        <Image
-                            src={item.img}
-                            alt={`${item.name} Mascot`}
-                            width={40}
-                            height={40}
-                            className="rounded-lg"
-                        />
-                    ) : null}
-                    {item.name}
-                </Link>
-            ))}
+                        ) : null}
+                        {item.name}
+                    </Link>
+                ))}
+                <ThemeToggle />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="flex items-center md:hidden">
+                <ThemeToggle />
+                <button
+                    onClick={toggleMenu}
+                    type="button"
+                    aria-controls="mobile-menu"
+                    aria-expanded={isMenuOpen}
+                    className="ml-2"
+                >
+                    <span className="sr-only">Toggle menu</span>
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </div>
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div
+                    id="mobile-menu"
+                    className="absolute top-full left-0 w-full bg-accent border-t border-foreground shadow-md md:hidden z-50"
+                >
+                    <div className="flex flex-col p-4 space-y-2">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="flex items-center gap-1"
+                                onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                            >
+                                {item.icon ? (
+                                    typeof item.icon === "function" ? (
+                                        <item.icon size={20} />
+                                    ) : (
+                                        <FontAwesomeIcon
+                                            icon={item.icon}
+                                            size="lg"
+                                        />
+                                    )
+                                ) : item.img ? (
+                                    <Image
+                                        src={item.img}
+                                        alt={`${item.name} Mascot`}
+                                        width={24}
+                                        height={24}
+                                    />
+                                ) : null}
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
         </nav>
     );
 }
