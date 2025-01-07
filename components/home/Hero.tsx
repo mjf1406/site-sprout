@@ -23,7 +23,8 @@ export default function Hero() {
                 {/* Speech Bubble */}
                 <div className="absolute -top-20 border-black dark:border-white border -right-32 bg-secondary p-4 rounded-lg shadow-lg max-w-[200px] flex flex-col items-center">
                     <p className="text-lg text-center">
-                        Hi! I'm Sprouty! Let's learn about the web together!
+                        Hi! I&apos;m Sprouty! Let&apos;s learn about the web
+                        together!
                     </p>
                     {/* SVG Tail */}
                     <svg
