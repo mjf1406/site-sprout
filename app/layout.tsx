@@ -40,7 +40,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${fredoka.variable} ${quicksand.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} ${fredoka.variable} ${quicksand.variable} antialiased bg-background`}
             >
                 <ThemeProvider
                     attribute="class"
@@ -49,10 +49,8 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Header />
-                    <main className="p-6 ">
-                        {children}
-                        <Footer />
-                    </main>
+                    <main className="p-6">{children}</main>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>
