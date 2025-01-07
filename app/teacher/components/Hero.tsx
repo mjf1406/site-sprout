@@ -1,17 +1,41 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function Hero() {
+    const { theme } = useTheme();
+    const isDark = theme === "dark";
     return (
         <div className="flex flex-col gap-5 justify-start mt-24 items-center min-h-screen max-w-lg">
-            <Image
-                src="/sprouty-teacher.png" // Path relative to the public folder
-                alt="Sprouty Student Mascot"
-                width={300} // Adjust width as needed
-                height={300} // Adjust height as needed
-                className="rounded-lg" // Optional: Add styling classes
-            />
+            <div className="relative">
+                <Image
+                    src="/sprouty-teacher.png" // Path relative to the public folder
+                    alt="Sprouty Teacher Mascot"
+                    width={300} // Adjust width as needed
+                    height={300} // Adjust height as needed
+                    className="rounded-lg" // Optional: Add styling classes
+                />
+                {/* Speech Bubble */}
+                <div className="absolute -top-20 border-black dark:border-white border -right-8 bg-secondary p-4 rounded-lg shadow-lg max-w-[200px] flex flex-col items-center">
+                    <p className="text-base text-center">
+                        Professor Sprouty here! Let&apos;s teach these kiddos
+                        how to use the web together!
+                    </p>
+                    {/* SVG Tail */}
+                    <svg
+                        className="w-10 h-10 absolute -bottom-6 -left-6 rotate-45"
+                        viewBox="0 0 20 10"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="hsl(var(--secondary))"
+                        stroke={isDark ? "#fff" : "#000"}
+                    >
+                        <path d="M0 -12 L10 15 L20 -12 Z" />
+                    </svg>
+                </div>
+            </div>
             {/* Kicker */}
             {/* <div className="text-xs">
                     <div className="flex gap-1 items-center justify-start">
