@@ -10,12 +10,13 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import LogoHome from "@/components/brand/LogoHome";
+import FooterTeacher from "./teacher/_components/footer-teacher";
 
 export default function Home() {
     return (
-        <div className="flex flex-col justify-center items-center gap-5 min-h-dvh py-6">
+        <div className="flex flex-col justify-center items-center gap-5 min-h-dvh pt-6">
             <LogoHome />
-            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-6 items-start justify-center min-h-[75vh]">
                 <Link href={"/learn"}>
                     <Card className="w-full max-w-sm">
                         <CardHeader>
@@ -62,6 +63,7 @@ export default function Home() {
                     </Card>
                 </Link>
             </div>
+            <FooterTeacher />
         </div>
     );
 }

@@ -63,6 +63,7 @@ DB = database
 
 2025/01/08
 
+-   UI: added footer to homepage
 -   UX: homepage now has user selecting if their a student or teacher
 -   UX: added /learn and /teacher for the above
 
