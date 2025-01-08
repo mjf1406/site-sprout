@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = localFont({
@@ -28,8 +26,9 @@ const quicksand = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "ASL Resources for Silent Time",
-    description: "Easily download and print ASL resources for your classroom.",
+    title: "Site Sprout - Where students learn web elements",
+    description:
+        "Simple, effective, and interactive lessons for students to learn all about the web.",
 };
 
 export default function RootLayout({
@@ -48,9 +47,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <Header />
-                    <main className="p-6 min-h-screen">{children}</main>
-                    <Footer />
+                    <main className="">{children}</main>
                 </ThemeProvider>
             </body>
         </html>

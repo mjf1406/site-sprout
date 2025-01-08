@@ -12,6 +12,48 @@ Where kids come to learn the names of different items on the web!
 
 ### p0
 
+-   Print Features
+
+    -   Title
+    -   Subtitle
+    -   Title page
+    -   Table of contents
+    -   Heading
+    -   Subheading
+    -   Index
+    -   Glossary
+    -   Photograph
+    -   Caption
+    -   Illustration
+    -   Sidebar
+    -   Diagram & Labels
+    -   Graph or chart
+    -   Table
+    -   Timeline
+    -   Cross section
+    -   Map
+    -   Keywords
+    -   Close up
+    -   Hyperlink
+    -   Icon
+    -   Guide word
+    -   Bullet points
+
+-   Online Features
+    -   Navigation Bar
+    -   Hamburger Menu
+    -   Search Bar
+    -   Dropdown Menus
+    -   Pop-Ups
+    -   Notification Banners
+    -   Form
+    -   Breadcrumb
+    -   Address bar
+    -   Tooltip
+    -   Tabs
+    -   Hyperlink
+    -   Address bar
+
 ## Change Log
 
 BE = backend

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Code2Icon, CodeIcon } from "lucide-react";
 import Link from "next/link";
 
-const Footer = () => {
+const FooterLearn = () => {
     // Define the links with label in plain English
     const links = [
         {
@@ -108,4 +108,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default FooterLearn;

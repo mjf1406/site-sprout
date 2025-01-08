@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react"; // Import Menu and X icons
 import { LucideIcon } from "lucide-react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ThemeToggle } from "./ui/theme-toggle";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export type NavItem = {
     name: string;
@@ -19,18 +19,17 @@ export type NavItem = {
 const navItems: NavItem[] = [
     {
         name: "Students",
-        href: "/",
+        href: "/learn",
         img: "/sprouty-student.png",
     },
     {
         name: "Teachers",
-        href: "/teacher",
+        href: "/",
         img: "/sprouty-teacher.png",
     },
-    // Add more nav items as needed
 ];
 
-export default function NavHeader() {
+export default function NavTeacher() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
