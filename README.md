@@ -63,6 +63,9 @@ DB = database
 
 2025/01/08
 
+-   UX: added a prototype Buttons lesson
+-   BE: added a Quiz component
+-   UX: added a 404 page
 -   UI: added footer to homepage
 -   UX: homepage now has user selecting if their a student or teacher
 -   UX: added /learn and /teacher for the above

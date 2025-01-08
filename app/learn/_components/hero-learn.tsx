@@ -4,6 +4,7 @@ import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { ArrowRightIcon } from "lucide-react";
 
 export default function HeroLearn() {
     const { theme } = useTheme();
@@ -50,7 +51,9 @@ export default function HeroLearn() {
             {/* Call to Action */}
             <div className="space-x-2 self-start">
                 <Link href={"/learn/lesson"}>
-                    <Button>Start Learning! </Button>
+                    <Button>
+                        Start Learning! <ArrowRightIcon />
+                    </Button>
                 </Link>
             </div>
         </div>
