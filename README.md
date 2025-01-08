@@ -61,6 +61,11 @@ UX = user experience
 UI = user interface
 DB = database
 
+2025/01/08
+
+-   UX: homepage now has user selecting if their a student or teacher
+-   UX: added /learn and /teacher for the above
+
 2025/01/07
 
 -   UX: added a site mascot
