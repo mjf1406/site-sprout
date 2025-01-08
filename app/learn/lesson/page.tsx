@@ -14,7 +14,7 @@ import { formatMinutes } from "./_lib/utils-lessons";
 
 export default async function Home() {
     return (
-        <div className="flex flex-col items-start justify-center">
+        <div className="flex flex-col items-center justify-center">
             <div className="max-w-5xl w-full">
                 <div className="mt-8 space-y-12">
                     {LESSON_CATEGORIES.map((category) => {
