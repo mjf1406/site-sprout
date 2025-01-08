@@ -49,7 +49,7 @@ export default function HeroLearn() {
             </p>
             {/* Call to Action */}
             <div className="space-x-2 self-start">
-                <Link href={"/lesson/1"}>
+                <Link href={"/learn/lesson"}>
                     <Button>Start Learning! </Button>
                 </Link>
             </div>

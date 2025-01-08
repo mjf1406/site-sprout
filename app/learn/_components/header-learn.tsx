@@ -2,7 +2,7 @@ import Link from "next/link";
 import { APP_NAME } from "@/lib/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons";
-import NavLearn from "./nav";
+import NavLearn from "./nav-learn";
 
 export default function HeaderLearn() {
     return (

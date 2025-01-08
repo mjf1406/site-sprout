@@ -1,5 +1,5 @@
-import HeaderLearn from "./_components/header";
-import FooterLearn from "./_components/footer";
+import HeaderLearn from "./_components/header-learn";
+import FooterLearn from "./_components/footer-learn";
 
 export default function LayoutLearn({
     children,
