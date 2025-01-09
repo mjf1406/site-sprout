@@ -10,9 +10,9 @@ html {
 
 @layer base {
     :root {
+        --logo: 136.88 44.04% 42.75%;
         --background: 200 100% 95%;
         --foreground: 0 0% 10%;
-        --logo: 136.88 44.04% 42.75%;
         --card: 0 0 100%;
         --card-foreground: 0 0% 10%;
         --popover: 60 100% 95%;
@@ -38,9 +38,9 @@ html {
         --chart-5: 280 100% 90%;
     }
     .dark {
-        --background: 200 30% 10%;
-        --foreground: 0 0% 90%;
         --logo: 137.33 44.12% 40%;
+        --background: 200 30% 13%;
+        --foreground: 0 0% 90%;
         --card: 200 30% 5%;
         --card-foreground: 0 0% 90%;
         --popover: 60 25% 15%;
