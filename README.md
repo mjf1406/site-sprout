@@ -72,6 +72,7 @@ DB = database
 
 2025/01/09
 
+-   UX: disabled intermediate and advanced lessons
 -   UI: made explore and quiz lessons span the whole grid width and added a cute Sprouty to each one
 
 2025/01/08

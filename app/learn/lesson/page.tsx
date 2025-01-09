@@ -25,6 +25,11 @@ export default async function Home() {
 
                         if (filteredLessons.length === 0) return null;
 
+                        // Check if the category is "intermediate" or "advanced"
+                        const isDisabledCategory =
+                            category === "intermediate" ||
+                            category === "advanced";
+
                         return (
                             <div key={category}>
                                 <h2 className="text-3xl font-bold mb-6 capitalize">
@@ -46,12 +51,18 @@ export default async function Home() {
                                         return (
                                             <Link
                                                 key={lesson.id}
-                                                href={lesson.path}
+                                                href={
+                                                    isDisabledCategory
+                                                        ? "#"
+                                                        : lesson.path
+                                                } // Disable link for intermediate/advanced
                                                 passHref
                                                 className={cn(
                                                     isFullWidth
                                                         ? "sm:col-span-2 lg:col-span-3"
-                                                        : "col-span-1"
+                                                        : "col-span-1",
+                                                    isDisabledCategory &&
+                                                        "opacity-50 cursor-not-allowed pointer-events-none" // Apply opacity and disable pointer events
                                                 )}
                                             >
                                                 <Card className="hover:shadow-lg transition-shadow duration-300 grid grid-cols-3">
@@ -82,14 +93,22 @@ export default async function Home() {
                                                             </p>
                                                         </CardContent>
                                                         <CardFooter className="flex justify-between items-center">
-                                                            <Button variant="default">
-                                                                {!isFullWidth && (
-                                                                    <span>
-                                                                        Learn
-                                                                        about
-                                                                    </span>
-                                                                )}
-                                                                {lesson.title}
+                                                            <Button
+                                                                variant="default"
+                                                                disabled={
+                                                                    isDisabledCategory
+                                                                } // Disable button for intermediate/advanced
+                                                            >
+                                                                {isDisabledCategory
+                                                                    ? "Coming Soon!"
+                                                                    : !isFullWidth && (
+                                                                          <span>
+                                                                              Learn
+                                                                              about
+                                                                          </span>
+                                                                      )}
+                                                                {!isDisabledCategory &&
+                                                                    lesson.title}
                                                             </Button>
                                                         </CardFooter>
                                                     </div>
