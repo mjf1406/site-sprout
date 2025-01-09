@@ -7,6 +7,7 @@ import {
     CardContent,
     CardFooter,
     CardTitle,
+    CardDescription,
 } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,9 +16,10 @@ import BackButton from "@/components/BackButton";
 
 export default function Custom404() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 p-4">
-            <Card className="max-w-md w-full p-6 shadow-lg rounded-lg bg-white">
+        <div className="min-h-screen flex items-center justify-center ">
+            <Card className="max-w-md w-full p-6 shadow-lg rounded-lg">
                 <CardHeader className="flex flex-col items-center">
+                    <CardDescription>404 Not Found</CardDescription>
                     {/* Fun SVG Art */}
                     <Image
                         src="/sprouty-404.png" // Ensure you have this SVG in your public/images directory
@@ -26,16 +28,14 @@ export default function Custom404() {
                         height={300}
                         className="mb-4"
                     />
-                    <CardTitle className="text-3xl text-blue-600">
-                        Oops!
-                    </CardTitle>
+                    <CardTitle className="text-3xl font-bold">Oops!</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                    <p className="text-gray-700 mb-4">
+                    <p className="mb-4">
                         Looks like you&apos;ve stumbled upon a page that
                         doesn&apos;t exist.
                     </p>
-                    <p className="text-gray-700 mb-6">
+                    <p className="mb-6">
                         Don&apos;t worry, let&apos;s get you back on track!
                     </p>
                 </CardContent>

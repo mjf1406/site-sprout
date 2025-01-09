@@ -49,7 +49,7 @@ export default async function Home() {
                                                     </CardDescription>
                                                 </CardHeader>
                                                 <CardContent>
-                                                    <p className="text-gray-600">
+                                                    <p className="">
                                                         {lesson.description}
                                                     </p>
                                                 </CardContent>

@@ -95,7 +95,7 @@ export default function ButtonsLesson() {
                     <h2 className="text-2xl font-semibold mb-2">
                         Introduction to Buttons
                     </h2>
-                    <p className="text-gray-700">
+                    <p className="">
                         Buttons are interactive elements that allow users to
                         perform actions, such as submitting a form, opening a
                         dialog, or navigating to another page. They come in
@@ -115,7 +115,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Primary Button
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             The primary button is used for the main action on a
                             page. It usually stands out with a distinct color to
                             attract attention.
@@ -128,7 +128,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Secondary Button
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             The secondary button is used for less important
                             actions. It complements the primary button without
                             drawing as much attention.
@@ -141,7 +141,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Disabled Button
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             Disabled buttons are non-interactive and indicate
                             that an action is currently unavailable.
                         </p>
@@ -159,7 +159,7 @@ export default function ButtonsLesson() {
                     <h2 className="text-2xl font-semibold mb-2">
                         Icons in Buttons
                     </h2>
-                    <p className="text-gray-700 mb-4">
+                    <p className=" mb-4">
                         Adding icons to buttons can make them more informative
                         and visually appealing. Icons help users quickly
                         understand the purpose of the button.
@@ -170,7 +170,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Confirm Action
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             A check icon indicates that the button will confirm
                             or complete an action.
                         </p>
@@ -185,7 +185,7 @@ export default function ButtonsLesson() {
                     {/* Example: Button with Plus Icon */}
                     <div className="mb-4">
                         <h3 className="text-xl font-medium mb-1">Add Item</h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             A plus icon signifies that the button will add a new
                             item or element.
                         </p>
@@ -202,7 +202,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Delete Item
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             A trash icon clearly shows that the button will
                             delete or remove something.
                         </p>
@@ -219,7 +219,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Visit Website
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             An external link icon shows that clicking the button
                             will take you to a different website.
                         </p>
@@ -234,7 +234,7 @@ export default function ButtonsLesson() {
                     {/* Example: Button with Arrow Right Icon */}
                     <div className="mb-4">
                         <h3 className="text-xl font-medium mb-1">Learn More</h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             An arrow right icon indicates that clicking the
                             button will take you to another page within the same
                             site.
@@ -252,7 +252,7 @@ export default function ButtonsLesson() {
                         <h3 className="text-xl font-medium mb-1">
                             Open in New Tab
                         </h3>
-                        <p className="text-gray-700 mb-2">
+                        <p className=" mb-2">
                             An arrow up right icon shows that clicking the
                             button will open the link in a new tab.
                         </p>
@@ -271,7 +271,7 @@ export default function ButtonsLesson() {
                 {/* Summary */}
                 <section>
                     <h2 className="text-2xl font-semibold mb-2">Summary</h2>
-                    <p className="text-gray-700">
+                    <p className="">
                         Buttons are essential elements in user interfaces that
                         enable users to interact with applications. By
                         understanding the different types of buttons and how to

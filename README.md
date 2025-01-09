@@ -4,14 +4,6 @@ Where kids come to learn the names of different items on the web!
 
 ## To-do List
 
-### p2
-
-### p1
-
--   UX: Implement internationalization with [next-international](https://next-international.vercel.app/docs)
-
-### p0
-
 -   Print Features
 
     -   Title
@@ -53,6 +45,18 @@ Where kids come to learn the names of different items on the web!
     -   Tabs
     -   Hyperlink
     -   Address bar
+
+### p2
+
+### p1
+
+-   UX: Implement internationalization with [next-international](https://next-international.vercel.app/docs)
+
+### p0
+
+-   UX: add breadcrumbs to lessons
+
+DUE DATE: March 31, 2025
 
 ## Change Log
 
