@@ -18,28 +18,139 @@ const pathPrefix = '/learn/lesson'
 export const LESSON_DATA: Lesson[] = [
   // Basics
   {
+    id: 'navigation-bar',
+    title: 'Navigation Bar',
+    path: `${pathPrefix}/navigation-bar`,
+    category: 'basics',
+    estimatedTime: 50,
+    description:
+      'Discover the Navigation Bar, which helps you move around a website just like the table of contents in a book!',
+  },
+  {
+    id: 'hamburger-menu',
+    title: 'Hamburger Menu',
+    path: `${pathPrefix}/hamburger-menu`,
+    category: 'basics',
+    estimatedTime: 45,
+    description:
+      'Learn about the Hamburger Menu, a special icon that hides and shows the menu, similar to a chapter list in a book.',
+  },
+  {
+    id: 'search-bar',
+    title: 'Search Bar',
+    path: `${pathPrefix}/search-bar`,
+    category: 'basics',
+    estimatedTime: 40,
+    description:
+      'Understand how the Search Bar helps you find information on a website, just like an index in a book!',
+  },
+  {
+    id: 'dropdown-menu',
+    title: 'Dropdown Menu',
+    path: `${pathPrefix}/dropdown-menu`,
+    category: 'basics',
+    estimatedTime: 50,
+    description:
+      'Learn how Dropdown Menus work to show more options, similar to expanding a list of topics in a book.',
+  },
+  {
+    id: 'popover',
+    title: 'Pop-Up',
+    path: `${pathPrefix}/popover`,
+    category: 'basics',
+    estimatedTime: 45,
+    description:
+      'Discover Pop-Ups that appear on the screen to give you extra information, like footnotes in a book!',
+  },
+  {
+    id: 'alert',
+    title: 'Notification Banner',
+    path: `${pathPrefix}/alert`,
+    category: 'basics',
+    estimatedTime: 40,
+    description:
+      'Learn about Notification Banners that inform you about important messages, just like sticky notes in a book!',
+  },
+  {
+    id: 'toast',
+    title: 'Toasts',
+    path: `${pathPrefix}/toast`,
+    category: 'basics',
+    estimatedTime: 35,
+    description:
+      'Understand Toast notifications that briefly appear to tell you something important, similar to side notes in a book!',
+  },
+  {
+    id: 'form',
+    title: 'Form',
+    path: `${pathPrefix}/form`,
+    category: 'basics',
+    estimatedTime: 50,
+    description:
+      'Learn how Forms collect your information, just like worksheets in school!',
+  },
+  {
+    id: 'breadcrumb',
+    title: 'Breadcrumb',
+    path: `${pathPrefix}/breadcrumb`,
+    category: 'basics',
+    estimatedTime: 40,
+    description:
+      'Understand Breadcrumbs that show you where you are on a website, similar to the page numbers or chapters in a book!',
+  },
+  {
+    id: 'address-bar',
+    title: 'Address Bar',
+    path: `${pathPrefix}/address-bar`,
+    category: 'basics',
+    estimatedTime: 30,
+    description:
+      'Learn about the Address Bar where you type in website names, just like the title page in a book!',
+  },
+  {
+    id: 'tooltip',
+    title: 'Tooltip',
+    path: `${pathPrefix}/tooltip`,
+    category: 'basics',
+    estimatedTime: 35,
+    description:
+      'Discover Tooltips that give you extra information when you hover over something, like side notes in a book!',
+  },
+  {
+    id: 'tabs',
+    title: 'Tabs',
+    path: `${pathPrefix}/tabs`,
+    category: 'basics',
+    estimatedTime: 40,
+    description:
+      'Learn how Tabs organize content into different sections, similar to chapters in a book!',
+  },
+  {
+    id: 'hyperlink',
+    title: 'Hyperlink',
+    path: `${pathPrefix}/hyperlink`,
+    category: 'basics',
+    estimatedTime: 30,
+    description:
+      'Understand Hyperlinks that connect you to different pages, just like references in a book!',
+  },
+
+  // Intermediate
+  // Moved from Basics to Intermediate
+  {
     id: 'buttons',
     title: 'Buttons',
     path: `${pathPrefix}/buttons`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 80,
     description:
       'Learn everything about buttons, from the different types to various icons and their meanings!',
   },
   {
-    id: 'alert',
-    title: 'Alert',
-    path: `${pathPrefix}/alert`,
-    category: 'basics',
-    estimatedTime: 45,
-    description:
-      'Understand how to display important messages to users using Alert components.',
-  },
-  {
     id: 'avatar',
     title: 'Avatar',
     path: `${pathPrefix}/avatar`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 40,
     description:
       'Learn how to use Avatar components to represent users with images or initials.',
@@ -48,7 +159,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'badge',
     title: 'Badge',
     path: `${pathPrefix}/badge`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 40,
     description:
       'Discover how to use Badges to display status or notification counts.',
@@ -57,7 +168,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'button',
     title: 'Button',
     path: `${pathPrefix}/button`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 50,
     description:
       'Learn how to create and style interactive buttons for user actions.',
@@ -66,25 +177,16 @@ export const LESSON_DATA: Lesson[] = [
     id: 'checkbox',
     title: 'Checkbox',
     path: `${pathPrefix}/checkbox`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 45,
     description:
       'Understand how to use Checkboxes for multiple selections in forms.',
   },
   {
-    id: 'form',
-    title: 'Form',
-    path: `${pathPrefix}/form`,
-    category: 'basics',
-    estimatedTime: 70,
-    description:
-      'Learn the fundamentals of creating and managing forms for user input.',
-  },
-  {
     id: 'input',
     title: 'Input',
     path: `${pathPrefix}/input`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 50,
     description:
       'Discover how to create and handle different types of input fields.',
@@ -93,7 +195,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'label',
     title: 'Label',
     path: `${pathPrefix}/label`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 30,
     description:
       'Learn how to use Labels to describe form fields and improve accessibility.',
@@ -102,7 +204,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'progress',
     title: 'Progress',
     path: `${pathPrefix}/progress`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 35,
     description:
       'Understand how to display progress indicators for ongoing tasks.',
@@ -111,7 +213,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'radio-group',
     title: 'Radio Group',
     path: `${pathPrefix}/radio-group`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 45,
     description:
       'Learn how to use Radio Groups for single selections within forms.',
@@ -120,7 +222,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'select',
     title: 'Select',
     path: `${pathPrefix}/select`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 50,
     description:
       'Discover how to create dropdown Select components for choosing options.',
@@ -129,7 +231,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'separator',
     title: 'Separator',
     path: `${pathPrefix}/separator`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 30,
     description:
       'Learn how to use Separators to divide content and improve layout clarity.',
@@ -138,7 +240,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'slider',
     title: 'Slider',
     path: `${pathPrefix}/slider`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 50,
     description:
       'Understand how to implement Sliders for selecting values within a range.',
@@ -147,7 +249,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'switch',
     title: 'Switch',
     path: `${pathPrefix}/switch`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 40,
     description:
       'Learn how to use Switches for toggling settings on and off.',
@@ -156,7 +258,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'table',
     title: 'Table',
     path: `${pathPrefix}/table`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 60,
     description:
       'Discover how to create and style Tables to display structured data.',
@@ -165,7 +267,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'textarea',
     title: 'Textarea',
     path: `${pathPrefix}/textarea`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 40,
     description:
       'Learn how to implement Textareas for multi-line user input.',
@@ -174,7 +276,7 @@ export const LESSON_DATA: Lesson[] = [
     id: 'toggle',
     title: 'Toggle',
     path: `${pathPrefix}/toggle`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 40,
     description:
       'Understand how to use Toggles for switching between two states.',
@@ -183,13 +285,13 @@ export const LESSON_DATA: Lesson[] = [
     id: 'toggle-group',
     title: 'Toggle Group',
     path: `${pathPrefix}/toggle-group`,
-    category: 'basics',
+    category: 'intermediate',
     estimatedTime: 50,
     description:
       'Learn how to group Toggles for multiple state switches.',
   },
 
-  // Intermediate
+  // Intermediate (existing intermediate lessons)
   {
     id: 'accordion',
     title: 'Accordion',
@@ -216,15 +318,6 @@ export const LESSON_DATA: Lesson[] = [
     estimatedTime: 55,
     description:
       'Learn how to maintain consistent aspect ratios for media and elements.',
-  },
-  {
-    id: 'breadcrumb',
-    title: 'Breadcrumb',
-    path: `${pathPrefix}/breadcrumb`,
-    category: 'intermediate',
-    estimatedTime: 60,
-    description:
-      'Discover how to use Breadcrumbs to enhance navigation within your application.',
   },
   {
     id: 'calendar',
@@ -317,15 +410,6 @@ export const LESSON_DATA: Lesson[] = [
       'Understand how to use Drawers to present additional content or navigation options.',
   },
   {
-    id: 'dropdown-menu',
-    title: 'Dropdown Menu',
-    path: `${pathPrefix}/dropdown-menu`,
-    category: 'intermediate',
-    estimatedTime: 60,
-    description:
-      'Learn how to create Dropdown Menus for presenting a list of options.',
-  },
-  {
     id: 'hover-card',
     title: 'Hover Card',
     path: `${pathPrefix}/hover-card`,
@@ -369,15 +453,6 @@ export const LESSON_DATA: Lesson[] = [
     estimatedTime: 60,
     description:
       'Discover how to use Pagination to navigate through large sets of data efficiently.',
-  },
-  {
-    id: 'popover',
-    title: 'Popover',
-    path: `${pathPrefix}/popover`,
-    category: 'intermediate',
-    estimatedTime: 65,
-    description:
-      'Learn how to implement Popovers for displaying additional content on demand.',
   },
   {
     id: 'resizable',
@@ -424,33 +499,7 @@ export const LESSON_DATA: Lesson[] = [
     description:
       'Understand how to use Skeleton screens to improve perceived loading times.',
   },
-  {
-    id: 'tabs',
-    title: 'Tabs',
-    path: `${pathPrefix}/tabs`,
-    category: 'intermediate',
-    estimatedTime: 65,
-    description:
-      'Learn how to implement Tabs for organizing content into separate views.',
-  },
-  {
-    id: 'toast',
-    title: 'Toast',
-    path: `${pathPrefix}/toast`,
-    category: 'intermediate',
-    estimatedTime: 55,
-    description:
-      'Discover how to use Toast notifications to inform users about actions or events.',
-  },
-  {
-    id: 'tooltip',
-    title: 'Tooltip',
-    path: `${pathPrefix}/tooltip`,
-    category: 'intermediate',
-    estimatedTime: 50,
-    description:
-      'Learn how to implement Tooltips for providing contextual information on hover.',
-  },
+  // Tabs and Tooltip have been moved to Basics above
 
   // Advanced
   {

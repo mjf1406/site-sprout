@@ -38,6 +38,7 @@ Where kids come to learn the names of different items on the web!
     -   Dropdown Menus
     -   Pop-Ups
     -   Notification Banners
+    -   Toasts
     -   Form
     -   Breadcrumb
     -   Address bar
