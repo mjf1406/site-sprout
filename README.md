@@ -56,6 +56,10 @@ Where kids come to learn the names of different items on the web!
 ### p0
 
 -   UX: add breadcrumbs to lessons
+-   UX: How do I make these lesson interactive and micro? Let's start with the navigation bar
+-   UX: Student need to be a ble to choose their reading level, should have grades 2-6+
+-   UX: should we use a tour framework, like [Oboarda](https://www.onborda.dev/) or [NextStep](https://nextstepjs.com/)
+-   UX: Can we use the Socratic method with quiz questions to lead them through each lesson?
 
 DUE DATE: March 31, 2025
 
@@ -65,6 +69,10 @@ BE = backend
 UX = user experience
 UI = user interface
 DB = database
+
+2025/01/09
+
+-   UI: made explore and quiz lessons span the whole grid width and added a cute Sprouty to each one
 
 2025/01/08
 

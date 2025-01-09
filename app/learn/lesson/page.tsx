@@ -1,4 +1,3 @@
-// Import necessary modules and components
 import Link from "next/link";
 import { LESSON_CATEGORIES, LESSON_DATA } from "./_lib/constants";
 import {
@@ -11,6 +10,8 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatMinutes } from "./_lib/utils-lessons";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default async function Home() {
     return (
@@ -30,38 +31,85 @@ export default async function Home() {
                                     {category.replace(/-/g, " ")}
                                 </h2>
                                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                                    {filteredLessons.map((lesson) => (
-                                        <Link
-                                            key={lesson.id}
-                                            href={lesson.path}
-                                            passHref
-                                        >
-                                            <Card className="hover:shadow-lg transition-shadow duration-300">
-                                                <CardHeader>
-                                                    <CardTitle>
-                                                        {lesson.title}
-                                                    </CardTitle>
-                                                    <CardDescription>
-                                                        Estimated Time:{" "}
-                                                        {formatMinutes(
-                                                            lesson.estimatedTime
+                                    {filteredLessons.map((lesson, index) => {
+                                        // Check if the lesson ID contains "exploration" or "quiz"
+                                        const isFullWidth =
+                                            lesson.id.includes("exploration") ||
+                                            lesson.id.includes("quiz");
+
+                                        let image;
+                                        if (lesson.id.includes("exploration"))
+                                            image = "/sprouty-explore.png";
+                                        if (lesson.id.includes("quiz"))
+                                            image = "/sprouty-quiz.png";
+
+                                        return (
+                                            <Link
+                                                key={lesson.id}
+                                                href={lesson.path}
+                                                passHref
+                                                className={cn(
+                                                    isFullWidth
+                                                        ? "sm:col-span-2 lg:col-span-3"
+                                                        : "col-span-1"
+                                                )}
+                                            >
+                                                <Card className="hover:shadow-lg transition-shadow duration-300 grid grid-cols-3">
+                                                    <div
+                                                        className={cn(
+                                                            isFullWidth
+                                                                ? "col-span-2"
+                                                                : "col-span-full"
                                                         )}
-                                                    </CardDescription>
-                                                </CardHeader>
-                                                <CardContent>
-                                                    <p className="">
-                                                        {lesson.description}
-                                                    </p>
-                                                </CardContent>
-                                                <CardFooter className="flex justify-between items-center">
-                                                    <Button variant="default">
-                                                        Learn about{" "}
-                                                        {lesson.title}
-                                                    </Button>
-                                                </CardFooter>
-                                            </Card>
-                                        </Link>
-                                    ))}
+                                                    >
+                                                        <CardHeader>
+                                                            <CardTitle>
+                                                                {index + 1}.){" "}
+                                                                {lesson.title}
+                                                            </CardTitle>
+                                                            <CardDescription>
+                                                                Estimated Time:{" "}
+                                                                {formatMinutes(
+                                                                    lesson.estimatedTime
+                                                                )}
+                                                            </CardDescription>
+                                                        </CardHeader>
+                                                        <CardContent>
+                                                            <p className="">
+                                                                {
+                                                                    lesson.description
+                                                                }
+                                                            </p>
+                                                        </CardContent>
+                                                        <CardFooter className="flex justify-between items-center">
+                                                            <Button variant="default">
+                                                                {!isFullWidth && (
+                                                                    <span>
+                                                                        Learn
+                                                                        about
+                                                                    </span>
+                                                                )}
+                                                                {lesson.title}
+                                                            </Button>
+                                                        </CardFooter>
+                                                    </div>
+                                                    {isFullWidth && (
+                                                        <div className="relative col-span-1 flex items-center justify-center">
+                                                            <Image
+                                                                src={
+                                                                    image ?? ""
+                                                                }
+                                                                alt="Sprouty Mascot"
+                                                                width={200}
+                                                                height={200}
+                                                                className="rounded-lg"
+                                                            />
+                                                        </div>
+                                                    )}
+                                                </Card>
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         );

@@ -18,6 +18,15 @@ const pathPrefix = '/learn/lesson'
 export const LESSON_DATA: Lesson[] = [
   // Basics
   {
+    id: 'basics-exploration',
+    title: 'Explore the Basics',
+    path: `${pathPrefix}/basics-exploration`,
+    category: 'basics',
+    estimatedTime: 50,
+    description:
+      'Explore a webpage by clicking around to get an introduction to all the basics!',
+  },
+  {
     id: 'navigation-bar',
     title: 'Navigation Bar',
     path: `${pathPrefix}/navigation-bar`,
@@ -133,6 +142,15 @@ export const LESSON_DATA: Lesson[] = [
     estimatedTime: 30,
     description:
       'Understand Hyperlinks that connect you to different pages, just like references in a book!',
+  },
+  {
+    id: 'basics-interactive-quiz',
+    title: 'Test Your Basics Knowledge',
+    path: `${pathPrefix}/basics-interactive-quiz`,
+    category: 'basics',
+    estimatedTime: 50,
+    description:
+      'Sprouty will walk you through an interactive quiz all about the basics! Good Luck 😁',
   },
 
   // Intermediate

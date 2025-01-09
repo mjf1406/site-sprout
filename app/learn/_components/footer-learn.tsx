@@ -18,7 +18,7 @@ const FooterLearn = () => {
     ];
 
     return (
-        <footer className="flex w-full flex-col items-center justify-center gap-6 py-6 bg-accent">
+        <footer className="flex w-full flex-col items-center justify-center gap-6 py-6 bg-accent mt-20">
             <div className="flex gap-4">
                 {links.map(({ href, label, icon }) => (
                     <Button
